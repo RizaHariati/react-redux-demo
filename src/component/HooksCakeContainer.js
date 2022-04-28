@@ -7,7 +7,7 @@ const HooksCakeContainer = () => {
   const dispatch = useDispatch();
   return (
     <div>
-      <h2>Cakes in stock :10</h2>
+      <h2>Cakes in stock :{cakes}</h2>
       <button>Buy Cake</button>
     </div>
   );

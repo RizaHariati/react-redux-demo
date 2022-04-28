@@ -1,15 +1,16 @@
 import { BUY_CAKE } from "./cakeTypes";
 
 const initialState = {
-  cakes: 10,
+  cakes: 20,
 };
 
 const cakeReducer = (state = initialState, action) => {
   switch (action.type) {
     case BUY_CAKE:
+      const amount = state.cakes - action.payload;
       return {
         ...state,
-        cakes: state.cakes - 1,
+        cakes: amount,
       };
     default:
       return state;

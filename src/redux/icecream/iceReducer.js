@@ -7,9 +7,10 @@ const initialState = {
 const iceReducer = (state = initialState, action) => {
   switch (action.type) {
     case BUY_ICECREAM:
+      const amount = state.iceCreams - action.payload;
       return {
         ...state,
-        iceCreams: state.iceCreams - 1,
+        iceCreams: amount,
       };
     default:
       return state;
